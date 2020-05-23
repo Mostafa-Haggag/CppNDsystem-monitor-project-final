@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/format.h
+string
+-
+
+/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppND-System-Monitor-Project-Updated/src/format.cpp
+string
+-
+format.h
+/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppND-System-Monitor-Project-Updated/src/format.h
+

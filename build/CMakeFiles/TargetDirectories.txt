@@ -1,0 +1,3 @@
+/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppND-System-Monitor-Project-Updated/build/CMakeFiles/rebuild_cache.dir
+/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppND-System-Monitor-Project-Updated/build/CMakeFiles/monitor.dir
+/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppND-System-Monitor-Project-Updated/build/CMakeFiles/edit_cache.dir
