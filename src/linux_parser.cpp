@@ -220,7 +220,6 @@ if(filestream.is_open()){
 					        }
 						}
 	}	
-	  return std::to_string(ramsize);
 }
 /*we open 
 cat /proc/pid/status
@@ -229,6 +228,8 @@ VmSize:	  866252 kB
 and take the value in numbers and turn it to MB
 
 */
+	  return std::to_string(ramsize);
+
 }
 string LinuxParser::Uid(int pid) { 
 		string line,temp_1,temp_2;

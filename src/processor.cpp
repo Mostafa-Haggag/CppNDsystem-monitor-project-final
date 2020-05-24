@@ -14,9 +14,6 @@ float Processor::Utilization() {
   float irq = std::stof(value[LinuxParser::kIRQ_]);
   float softirq = std::stof(value[LinuxParser::kSoftIRQ_]);
   float steal = std::stof(value[LinuxParser::kSteal_]);
-  float guest = std::stof(value[LinuxParser::kGuest_]);
-  float guest_nice = std::stof(value[LinuxParser::kGuestNice_]);
-
   float Total_CPU_time_since_boot =
       user + nice + system + idle + iowait + irq + softirq + steal;
   float ideal_time=idle+iowait;

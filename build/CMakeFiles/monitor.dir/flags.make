@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++1z   -Wall -Wextra -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppND-System-Monitor-Project-Updated/include 
+CXX_INCLUDES = -I/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/include 
 
