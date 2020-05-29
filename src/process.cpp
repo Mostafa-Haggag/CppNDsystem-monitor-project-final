@@ -43,7 +43,7 @@ float Process::CpuUtilization() {
 		float total_time = utime + stime;
 		total_time = total_time + cutime + cstime;
 		float elapsed_time = LinuxParser::UpTime()-starttime/freq;
-		float cpu_usage =  100*((total_time / freq) / elapsed_time);
+		float cpu_usage =  ((total_time / freq) / elapsed_time);
 		return cpu_usage;
 
 }

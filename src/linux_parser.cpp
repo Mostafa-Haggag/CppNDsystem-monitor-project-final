@@ -25,11 +25,13 @@ string LinuxParser::OperatingSystem() {
       while (linestream >> key >> value) {
         if (key == "PRETTY_NAME") {
           std::replace(value.begin(), value.end(), '_', ' ');
+          	filestream.close();
           return value;
         }
       }
     }
   }
+  	filestream.close();
   return value;
 }
 
@@ -43,6 +45,8 @@ string LinuxParser::Kernel() {
     std::istringstream linestream(line);
     linestream >> os >> version>>kernel;
   }
+  	stream.close();
+
   return kernel;
 }
 
@@ -63,6 +67,7 @@ vector<int> LinuxParser::Pids() {
     }
   }
   closedir(directory);
+
   return pids;
 }
 
@@ -87,6 +92,8 @@ float LinuxParser::MemoryUtilization() {
 	}
 		total_used_memory   = MemTotal-MemFree;
 	}
+		stream.close();
+
 	return total_used_memory/MemTotal; 
 }
 
@@ -106,6 +113,7 @@ open cat /proc/uptime
 chose any of the 2 values and return it 
 
 */
+	stream.close();
 	return process; 
 }
 
@@ -160,6 +168,7 @@ int LinuxParser::TotalProcesses() {
 				 				  }
 						}
 					}
+	stream.close();
 	return process; 
 /*
 cat /proc/stat
@@ -189,6 +198,8 @@ int LinuxParser::RunningProcesses() {
 cat /proc/stat
 we search for procs_running 
 */
+
+		stream.close();
 	return process; }
 
 // TODO: Read and return the command associated with a process
@@ -214,9 +225,9 @@ if(filestream.is_open()){
     while (std::getline(filestream, line)) {
     				  std::istringstream linestream(line);
     	   		      while (linestream >> key >> value) {
-					        if (key == "VmSize:") {
+					        if (key == "VmData:") {
 					          ramsize = std::stoi(value);
-					          ramsize /= 1024;  // 1MB = 1024KB
+					          ramsize /= 1000;  
 					        }
 						}
 	}	
@@ -228,6 +239,7 @@ VmSize:	  866252 kB
 and take the value in numbers and turn it to MB
 
 */
+filestream.close();
 	  return std::to_string(ramsize);
 
 }
@@ -245,6 +257,7 @@ string LinuxParser::Uid(int pid) {
           	  break;
             }
           }
+    stream.close();
 	return temp_2;
 /*
 take the values from 
@@ -279,6 +292,7 @@ string LinuxParser::User(int pid) {
 			106 state the process number
 			messagebus
 		*/
+stream.close();
 return user;
  }
 
@@ -296,7 +310,7 @@ long LinuxParser::UpTime(int pid) {
 		for(int i=0;i<22;i++){
 			 linestream>>temp_1;
 		}
-   		time = std::stol(temp_1) / sysconf(_SC_CLK_TCK);
+   		time = LinuxParser::UpTime()-std::stol(temp_1) / sysconf(_SC_CLK_TCK);
 
    		 /*
 			open 
@@ -305,5 +319,6 @@ long LinuxParser::UpTime(int pid) {
 			divide it to get the time
    		 */
 		}
+		stream.close();
 	return time;
 }

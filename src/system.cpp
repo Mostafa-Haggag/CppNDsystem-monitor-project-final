@@ -23,7 +23,7 @@ vector<Process>& System::Processes() {
 	  vector<int> pids = LinuxParser::Pids();
   for (int pid : pids) {
     Process process(pid);
-    processes_.push_back(process);
+    processes_.emplace_back(process);
   }
     sort(processes_.begin(), processes_.end(),compare);
 	return processes_;

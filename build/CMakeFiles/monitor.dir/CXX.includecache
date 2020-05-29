@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/format.h
-string
--
-
 ../include/linux_parser.h
 fstream
 -
@@ -17,14 +13,6 @@ regex
 -
 string
 -
-
-../include/ncurses_display.h
-curses.h
--
-process.h
-../include/process.h
-system.h
-../include/system.h
 
 ../include/process.h
 string
@@ -47,48 +35,6 @@ process.h
 ../include/process.h
 processor.h
 ../include/processor.h
-
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/format.cpp
-string
--
-format.h
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/format.h
-
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/linux_parser.cpp
-dirent.h
--
-unistd.h
--
-string
--
-vector
--
-linux_parser.h
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/linux_parser.h
-
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/main.cpp
-ncurses_display.h
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/ncurses_display.h
-system.h
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/system.h
-
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/ncurses_display.cpp
-curses.h
--
-chrono
--
-string
--
-thread
--
-vector
--
-format.h
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/format.h
-ncurses_display.h
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/ncurses_display.h
-system.h
-/media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/system.h
 
 /media/mostafahaggag/0E22BAB022BA9BE1/torrentfinal/UDACITY_C++_course/FInalProject/CppNDsystem-monitor-project-final/src/process.cpp
 process.h
